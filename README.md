@@ -9,8 +9,9 @@ Apache Cassandra requires Java 8 to run on a Windows system. Additionally, the C
 To be able to install Cassandra on Windows, first you need to:
 
 Download and Install Java 8 and set environment variables.( Java SE Development Kit 8u251)
-Download and install Python 2.7 and set environment variables. (Go to This PC > Properties.and go to Advanced System Settings now Click the Environment Variables… button.>>Double click on the Path variable.Select New and then Browse.
-                                                                Add the Python 2.7 path to the Path system variable)
+Download and install Python 2.7 and set environment variables.
+ -(Go to This PC > Properties.and go to Advanced System Settings now Click the Environment Variables… button.>>Double click on the Path variable.Select New and then Browse.
+ - Add the Python 2.7 path to the Path system variable)
 
 
 **##Extract Cassandra tar.gz Folder**
