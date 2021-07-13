@@ -27,7 +27,7 @@ func init() {
 func Getallcategories(w http.ResponseWriter, r *http.Request) {
 	var categories []models.Category
 	m := map[string]interface{}{}
-	iter := Session.Query("SELECT * FROM Categories").Iter()
+	iter := Session.Query("SELECT * FROM categories").Iter()
 	for iter.MapScan(m) {
 		categories = append(categories, models.Category{
 			ID:   m["id"].(int),
@@ -48,7 +48,7 @@ func CreateCategory(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, "invalid data")
 	}
 	json.Unmarshal(reqBody, &NewCategory)
-	if err := Session.Query("INSERT INTO Products(id, Name) VALUES(?, ?)",
+	if err := Session.Query("INSERT INTO categories(id, Name) VALUES(?, ?)",
 		NewCategory.ID, NewCategory.Name).Exec(); err != nil {
 		fmt.Println("Error while inserting")
 		fmt.Println(err)
