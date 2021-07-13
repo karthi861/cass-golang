@@ -25,6 +25,8 @@ func main() {
 	router.HandleFunc("/addproduct", handlers.CreateProduct).Methods("POST")
 	router.HandleFunc("/updateproduct/{id}", handlers.UpdateProduct).Methods("PUT")
 	router.HandleFunc("/deleteproduct/{id}", handlers.DeleteProduct).Methods("DELETE")
+	router.HandleFunc("/createcategory", handlers.CreateCategory).Methods("POST")
+	router.HandleFunc("/allcategories", handlers.Getallcategories).Methods("GET")
 
 	log.Fatal(http.ListenAndServe(":3000", router))
 }
