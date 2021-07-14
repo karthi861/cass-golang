@@ -1,0 +1,14 @@
+Creating a keyspace(database) in cassandra :
+
+cqlsh>CREATE KEYSPACE ecommerce WITH replication = {'class':'SimpleStrategy', 'replication_factor' : 2};
+
+
+Create tables in the above database:
+
+cqlsh>USE ecommerce;
+cqlsh>>USE ecommerce>CREATE TABLE products(id int PRIMARY KEY,name text,descripiton text,category text,price float);
+cqlsh>Use ecommerce>CREATE TABLE categories(id int PRIMARY KEY,name text);
+
+View table :
+cqlsh>USE ecommerce>SELECT * from products;
+cqlsh>USE ecommerce>SELECT * from categories;
